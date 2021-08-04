@@ -1,0 +1,258 @@
+:root {
+    --purple: #6610f2;
+    --green: #00f048;
+    --black: #131313;
+    --white:#fff;
+    --white-transparency: rgba(255, 255, 255, 0.6);
+    --bg-purple: radial-gradient(#6610f2, #29006b);
+
+    font-family: 'Roboto', sans-serif;
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg-purple);
+    background-attachment: fixed;
+}
+
+hr {
+    background: var(--green);
+    margin: 0;
+}
+
+strong {
+    color: var(--purple);
+}
+
+/* Navbar */
+nav.bg-black {
+    background: var(--black);
+}
+
+nav {
+    border-bottom: 1px solid var(--green);
+}
+
+#nav-bar a.active {
+    color: var(--green);
+}
+
+/* Tecnologies */
+#tecnologies div.container-fluid {
+    background-color: var(--black);
+    padding: 70px 20px 10px;
+    border-bottom: 1px solid var(--purple);
+}
+
+#tecnologies .container-fluid div {
+    padding-bottom: 20px;
+    margin-right: 20px;
+}
+
+#tecnologies h3 {
+    font-size: 20px;
+    color: var(--green);
+    margin: 0;
+    padding-left: 5px;
+}
+
+#tecnologies ul,
+#tecnologies li {
+    margin: 0;
+}
+
+#tecnologies i {
+    font-size: 40px;
+    padding: 10px 5px 0 5px;
+    color: var(--white);
+}
+/* #tecnologies img {
+    padding: 0;
+    width: 36px;
+    height: 36px;
+    margin: 12px 5px 0;
+} */
+
+#tecnologies i:hover {
+    transition: 1s;
+    animation: colors 1.5s infinite alternate;
+}
+
+#tecnologies svg {
+    width: 36px;
+    height: 36px;
+    margin: 12px 5px 0;
+    fill: var(--white);
+}
+
+#tecnologies svg:hover {
+    transition: 1s;
+    animation: colors-svg 1.5s infinite alternate;
+}
+
+/* About */
+#about div.row {
+    padding: 60px 0 40px;
+    background: var(--black);
+}
+
+#about img {
+    border-radius: 500px;
+    width: 200px;
+    height: 200px;
+}
+
+#about h4 {
+    color: var(--green);
+    padding: 20px 0 0;
+}
+
+#about hr {
+    background-color: var(--purple);
+}
+
+#about p {
+    color: var(--white);
+}
+
+/* Projects */
+#projects div.container-projects{
+    background-color: var(--black);
+    margin: 70px 20px 0;
+}
+
+#projects div h4 {
+    padding: 20px 0 0;
+    color: var(--green);
+}
+
+#projects i {
+    font-size: 20px;
+    color: var(--purple);
+    margin-top: 5px;
+}
+#projects i:hover {
+    transition: 1s;
+    color: var(--green);
+}
+
+#projects div p {
+    padding: 10px;
+    color: var(--white);
+}
+
+#projects a {
+    background: var(--purple);
+    margin-bottom: 20px;
+    color: var(--white);
+    font-weight: bold;
+}
+
+#projects a:hover {
+    transition: 1s;
+    background: var(--green);
+    color: var(--black);
+}
+
+/* Contato */
+#contact div.container-fluid {
+    background: var(--black);
+    padding-bottom: 10px;
+    margin-top: 60px;
+    border-bottom: 1px solid var(--green);
+}
+
+#contact div.container-fluid h4:nth-child(1) {
+    padding: 60px 20px 10px;
+    text-align: center;
+    color: var(--green);
+}
+
+#contact div.container-fluid h4 {
+    padding: 10px 20px;
+    text-align: center;
+    color: var(--green);
+}
+
+#contact input {
+    margin-bottom: 5px;
+}
+
+#contact button {
+    background: var(--purple);
+    font-weight: bold;
+    color: var(--white);
+}
+
+#contact button:hover {
+    transition: 1s;
+    background: var(--green);
+    color: var(--black);
+}
+
+#contact a {
+    font-size: 30px;
+    color: var(--purple);
+    padding: 0 10px;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    transition: 1s;
+    color: var(--green);
+}
+
+/* Footer */
+footer {
+    background: var(--black);
+    height: 60px;
+    text-align: center;
+    padding: 20px;
+    /* margin-top: 20px; */
+    color: var(--white);
+}
+
+footer i {
+    color: var(--green);
+    animation: colors 1.5s infinite alternate;
+}
+
+/* Animações */
+@keyframes colors {
+    from {
+        color: var(--green);
+    }
+    to {
+        color: var(--purple);
+    }
+}
+
+@keyframes colors-svg {
+    from {
+        fill: var(--green);
+    }
+    to {
+        fill: var(--purple);
+    }
+}
+
+/* Efeito Focus Input */
+#contact textarea:focus, #contact input:focus, #contact select:focus {
+    box-shadow: 0 0 3 3 var(--green);
+    border: 2px solid var(--green);
+}
+
+/* Barra Letarel estilização */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 0;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+    background-color: var(--green);
+    -webkit-border-radius: 6px;
+}
