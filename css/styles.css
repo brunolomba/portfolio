@@ -70,16 +70,13 @@ nav {
     padding: 10px 5px 0 5px;
     color: var(--white);
 }
-/* #tecnologies img {
-    padding: 0;
-    width: 36px;
-    height: 36px;
-    margin: 12px 5px 0;
-} */
 
 #tecnologies i:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
-    animation: colors 1.5s infinite alternate;
+    -webkit-animation: colors 1.5s infinite alternate;
+            animation: colors 1.5s infinite alternate;
 }
 
 #tecnologies svg {
@@ -90,8 +87,11 @@ nav {
 }
 
 #tecnologies svg:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
-    animation: colors-svg 1.5s infinite alternate;
+    -webkit-animation: colors-svg 1.5s infinite alternate;
+            animation: colors-svg 1.5s infinite alternate;
 }
 
 /* About */
@@ -136,6 +136,8 @@ nav {
     margin-top: 5px;
 }
 #projects i:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     color: var(--green);
 }
@@ -153,6 +155,8 @@ nav {
 }
 
 #projects a:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     background: var(--green);
     color: var(--black);
@@ -189,6 +193,8 @@ nav {
 }
 
 #contact button:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     background: var(--green);
     color: var(--black);
@@ -202,6 +208,8 @@ nav {
 }
 
 #contact a:hover {
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
     color: var(--green);
 }
@@ -218,16 +226,34 @@ footer {
 
 footer i {
     color: var(--green);
-    animation: colors 1.5s infinite alternate;
+    -webkit-animation: colors 1.5s infinite alternate;
+            animation: colors 1.5s infinite alternate;
 }
 
 /* Animações */
+@-webkit-keyframes colors {
+    from {
+        color: var(--green);
+    }
+    to {
+        color: var(--purple);
+    }
+}
 @keyframes colors {
     from {
         color: var(--green);
     }
     to {
         color: var(--purple);
+    }
+}
+
+@-webkit-keyframes colors-svg {
+    from {
+        fill: var(--green);
+    }
+    to {
+        fill: var(--purple);
     }
 }
 
@@ -242,7 +268,8 @@ footer i {
 
 /* Efeito Focus Input */
 #contact textarea:focus, #contact input:focus, #contact select:focus {
-    box-shadow: 0 0 3 3 var(--green);
+    -webkit-box-shadow: 0 0 3 3 var(--green);
+            box-shadow: 0 0 3 3 var(--green);
     border: 2px solid var(--green);
 }
 
